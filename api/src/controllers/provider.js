@@ -1,4 +1,3 @@
-import { Request, Response } from "express";
 import {
   createProvider,
   deleteProvider,
@@ -43,9 +42,10 @@ export class ProviderController {
   static getAll = async (request, response) => {
     try {
       const id = request.params.id;
-      const getAllProviders = await getAllProviders(id);
-      response.status(200).send(provider);
+      const providers = await getAllProviders(id);
+      response.status(200).send(providers);
     } catch (err) {
+      console.log(err);
       response.status(500).send(err);
     }
   };

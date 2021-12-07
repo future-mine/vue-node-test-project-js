@@ -7,7 +7,6 @@ import swaggerJsDoc from "swagger-jsdoc";
 import * as swaggerUi from "swagger-ui-express";
 import { RegisterRoutes } from "./routes";
 import path from "path";
-import { router } from "./routes1";
 
 initDb();
 export const app = express();
